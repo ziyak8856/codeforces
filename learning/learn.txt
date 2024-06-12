@@ -1,0 +1,25 @@
+Graph:
+if you have repeat edges then do set<int>adj[n];
+constraint: if n square then go with two things to some map or check if n value in 1000 that you can 
+do the precomputation
+modular:
+(a+b)%m=(a%m+b%m)%m
+if is zero then do 
+(a+b)%m=0-----> a%m=(m-b%m)%m; if b%m=0 the a%m=m hence not possible so we do m-b%map
+Graph: modified dijsktra
+while(!pq.empty()){
+            int w=pq.top().first;
+            int node=pq.top().second;
+           
+            pq.pop();
+             if(w>dis[node])continue; //IMPORTANT
+            for(auto it:adj[node]){
+                int adjn=it[1];
+                int adw=it[0];
+                
+                if(w+adw<dis[adjn]&&(disappear[adjn]>w+adw)){
+                    dis[adjn]=adw+w;
+                    pq.push({adw+w,adjn});
+                }
+            }
+        }

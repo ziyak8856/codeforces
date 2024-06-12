@@ -1,0 +1,1 @@
+{"name":"Local: grid","url":"/home/ziyaurraheman/Desktop/codeforces/cses/dp/grid.cpp","tests":[{"id":1711543192788,"input":"4\n....\n.*..\n...*\n*...","output":"3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/ziyaurraheman/Desktop/codeforces/cses/dp/grid.cpp","group":"local","local":true}
