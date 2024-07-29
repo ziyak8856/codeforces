@@ -15,9 +15,6 @@ using namespace std;
     if(end<l||r<start){
         return 0;
     }
-    if(start==end){
-        return seg[i];
-    }
     if(start>=l&&end<=r){
         return seg[i];
     }
@@ -54,15 +51,15 @@ int main(){
         int t;
         cin>>t;
         if(t==1){
-         int v,i;
-         cin>>v>>i;
-         update(0,0,n-1,i,v,seg);
+         int k,i;
+         cin>>k>>i;
+         update(0,0,n-1,i,k-1,seg);
          
         }else{
             int l,r;
             cin>>l>>r;
-            r--;
-           cout<<query(0,l,r,0,n-1,seg)<<endl;
+            
+           cout<<query(0,l-1,r-1,0,n-1,seg)<<endl;
         }
     }
     
